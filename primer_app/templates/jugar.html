@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugar</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+
+   
+    <h1>WELCOME!</h1>
+    <!-- Sintaxis para comentar en jinja  línea 15 y 16-->
+    {# {{ }}  sintaxis jinja para leer variables  #} 
+    {#  {%  %}  sintaxis jinja para ejecutar expresiones logicas #}
+
+    {% for x in range(0,numero): %}
+        <img style="background-color:{{color}};"></img>
+    {% endfor %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/logica.js') }}"></script>
+    
+</body>
+</html>
