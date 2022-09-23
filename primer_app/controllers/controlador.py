@@ -28,6 +28,22 @@ def envio_formualario():
     return redirect ('/')
     # return 'Formulario enviado exitosamente'
 
+@app.route("/loginregistro")
+def login_registro():
+    return render_template("login_registro.html")
+
+@app.route('/process', methods=['POST'])
+def procesamiento():
+    if request.form['which_form'] == 'registro':
+        return "ACABAS DE REGISTRARTE EN NUESTRA WEB APP"
+    # if request.form['boton'] == 'Register':
+    #     return "enviaste un valor a traves del boton"
+    elif request.form['which_form'] == 'login':
+        return "SI QUIERES INGRESAR DEBES REGISTRARTE ANTES"
+    else:
+        return "ESTAS TRATANDO DE HACKEAR MI WEP APP??????"
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly

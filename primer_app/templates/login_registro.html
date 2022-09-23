@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- FORMULARIO REGISTRO -->
+    <form method="post" action="/process">
+        <input type="hidden" name="which_form" value="registro">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="first_name" id="nombre"> 
+        </div>
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="last_name" id="apellido">
+        </div>
+        <div>
+            <label for="correo">Correo</label>
+            <input type="text" name="email" id="correo">
+        </div>
+        <div>
+            <label for="pswd">Contraseña</label>
+            <input type="password" name="password" id="pswd">
+        </div>
+        <input type="submit" name="boton" value="Register">
+    </form>
+    <br><br>
+
+<!-- FORMULARIO DE LOGIN -->
+    <form method="post" action="/process">
+        <input type="hidden" name="which_form" value="login">
+        <div>
+            <label for="correo">Correo</label>
+            <input type="text" name="email" id="correo">
+        </div>
+        <div>
+            <label for="pswd">Password</label>
+            <input type="password" name="password" id="pswd">
+        </div>
+        <input type="submit" value="Login">
+    </form>
+    
+    
+
+</body>
+</html>
